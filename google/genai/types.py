@@ -6998,7 +6998,7 @@ class DistillationSpec(_common.BaseModel):
 
   base_teacher_model: Optional[str] = Field(
       default=None,
-      description="""The base teacher model that is being distilled, e.g., "gemini-1.0-pro-002".""",
+      description="""The base teacher model that is being distilled, e.g., "gemini-2.0-flash-001".""",
   )
   hyper_parameters: Optional[DistillationHyperParameters] = Field(
       default=None,
@@ -7030,7 +7030,7 @@ class DistillationSpecDict(TypedDict, total=False):
   """Tuning Spec for Distillation."""
 
   base_teacher_model: Optional[str]
-  """The base teacher model that is being distilled, e.g., "gemini-1.0-pro-002"."""
+  """The base teacher model that is being distilled, e.g., "gemini-2.0-flash-001"."""
 
   hyper_parameters: Optional[DistillationHyperParametersDict]
   """Optional. Hyperparameters for Distillation."""
@@ -7091,7 +7091,7 @@ class TuningJob(_common.BaseModel):
   )
   base_model: Optional[str] = Field(
       default=None,
-      description="""The base model that is being tuned, e.g., "gemini-1.0-pro-002". .""",
+      description="""The base model that is being tuned, e.g., "gemini-2.0-flash-001". .""",
   )
   tuned_model: Optional[TunedModel] = Field(
       default=None,
@@ -7171,7 +7171,7 @@ class TuningJobDict(TypedDict, total=False):
   """Optional. The description of the TuningJob."""
 
   base_model: Optional[str]
-  """The base model that is being tuned, e.g., "gemini-1.0-pro-002". ."""
+  """The base model that is being tuned, e.g., "gemini-2.0-flash-001". ."""
 
   tuned_model: Optional[TunedModelDict]
   """Output only. The tuned model resources associated with this TuningJob."""
@@ -7432,7 +7432,7 @@ class _CreateTuningJobParameters(_common.BaseModel):
 
   base_model: Optional[str] = Field(
       default=None,
-      description="""The base model that is being tuned, e.g., "gemini-1.0-pro-002".""",
+      description="""The base model that is being tuned, e.g., "gemini-2.0-flash-001".""",
   )
   training_dataset: Optional[TuningDataset] = Field(
       default=None,
@@ -7447,7 +7447,7 @@ class _CreateTuningJobParametersDict(TypedDict, total=False):
   """Supervised fine-tuning job creation parameters - optional fields."""
 
   base_model: Optional[str]
-  """The base model that is being tuned, e.g., "gemini-1.0-pro-002"."""
+  """The base model that is being tuned, e.g., "gemini-2.0-flash-001"."""
 
   training_dataset: Optional[TuningDatasetDict]
   """Cloud Storage path to file containing training dataset for tuning. The dataset must be formatted as a JSONL file."""
@@ -7585,7 +7585,7 @@ class _CreateCachedContentParameters(_common.BaseModel):
 
   model: Optional[str] = Field(
       default=None,
-      description="""ID of the model to use. Example: gemini-1.5-flash""",
+      description="""ID of the model to use. Example: gemini-2.0-flash""",
   )
   config: Optional[CreateCachedContentConfig] = Field(
       default=None,
@@ -7598,7 +7598,7 @@ class _CreateCachedContentParametersDict(TypedDict, total=False):
   """Parameters for caches.create method."""
 
   model: Optional[str]
-  """ID of the model to use. Example: gemini-1.5-flash"""
+  """ID of the model to use. Example: gemini-2.0-flash"""
 
   config: Optional[CreateCachedContentConfigDict]
   """Configuration that contains optional parameters.
